@@ -48,6 +48,59 @@ const arrayBici = [
 
 const { nome, peso } = arrayBici[3]
   
-  console.log( nome, peso )
+console.log( nome, peso )
   
-  document.getElementById("biciLight").innerHTML = `La bici più leggera è: ${nome} con un peso di ${peso}kg `
+document.getElementById("biciLight").innerHTML = `La bici più leggera è: ${nome} con un peso di ${peso}kg `
+
+
+/* snack 2 */
+
+
+let squadreCalcio = [
+
+  {
+    squadra : "Fiorentina",
+    punti : 0,
+    falli : 0
+  },
+
+  {
+    squadra : "Lecce",
+    punti : 0,
+    falli : 0
+  },
+
+  {
+    squadra : "Udinese",
+    punti : 0,
+    falli : 0
+  },
+
+  {
+    squadra : "Atalanta",
+    punti : 0,
+    falli : 0
+  }
+
+]
+
+function cpuNumberGenerator( min, max ){
+
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+let arraySquadraFalli = []
+
+squadreCalcio.forEach( element => {
+
+  element.punti = cpuNumberGenerator( 1, 100 )
+
+  element.falli = cpuNumberGenerator( 1, 100 ) 
+
+  arraySquadraFalli.push(element.squadra, element.falli)
+
+})
+
+console.log(squadreCalcio)
+
+console.log(arraySquadraFalli)
